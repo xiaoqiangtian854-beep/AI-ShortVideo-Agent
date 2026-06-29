@@ -1,0 +1,30 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "ai-shortvideo-agent"
+version = "0.1.0"
+description = "Open-source AI workflows and a small planning engine for short-video operations."
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+authors = [
+  { name = "Xiaoqiang Tian" }
+]
+keywords = ["ai", "short-video", "codex", "content-operations", "workflow"]
+classifiers = [
+  "Development Status :: 2 - Pre-Alpha",
+  "Intended Audience :: Developers",
+  "License :: OSI Approved :: MIT License",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3.10",
+  "Topic :: Communications",
+  "Topic :: Multimedia :: Video"
+]
+
+[project.scripts]
+shortvideo-agent = "shortvideo_agent.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
